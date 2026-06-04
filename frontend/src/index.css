@@ -22,13 +22,4 @@
   .text-shadow-soft {
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
-  .font-heading {
-    font-family: "Playfair Display", "Cormorant Garamond", serif !important;
-  }
-  .font-script {
-    font-family: "Great Vibes", "Parisienne", cursive !important;
-  }
-  .font-body {
-    font-family: "Lora", serif !important;
-  }
 }
