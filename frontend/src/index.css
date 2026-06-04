@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lavender: #8e7cc3;
+  --color-dusty-pink: #f4c2d7;
+  --color-rose: #ff7a9e;
+  --font-heading: "Playfair Display", "Cormorant Garamond", serif;
+  --font-script: "Great Vibes", "Parisienne", cursive;
+  --font-body: "Lora", serif;
+}
+
+@layer base {
+  body {
+    @apply font-body bg-slate-50 text-gray-800;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-shadow-soft {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+}
