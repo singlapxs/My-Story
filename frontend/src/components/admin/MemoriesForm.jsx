@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaTrash, FaPlus, FaUpload } from 'react-icons/fa';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
 const MemoriesForm = ({ content, updateContent, token, isLoading }) => {
   const [memories, setMemories] = useState([]);
   const [uploadingIdx, setUploadingIdx] = useState(null);
@@ -33,7 +35,7 @@ const MemoriesForm = ({ content, updateContent, token, isLoading }) => {
     formData.append('media', file);
 
     try {
-      const response = await fetch('http://localhost:5000/api/upload', {
+      const response = await fetch(`${API_URL}/upload`, {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` },
         body: formData
